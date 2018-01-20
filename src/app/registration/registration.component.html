@@ -1,0 +1,49 @@
+<h1>Registration Form:</h1>
+<div>
+	<span>Login: </span>
+	<input [(ngModel)]="user.login" placeholder="Enter Your Login">
+	<span *ngIf="checkLogin(user)" style="color:red; font-size:75%;"> Your login has to be at least 8 characters long</span>
+</div>
+<div>
+	<span>Email: </span>
+	<input [(ngModel)]="user.email" style="width: 250px;" type="text" name="email1" placeholder="Enter Your Email">
+	<span *ngIf="checkEmail(user)" style="color:red; font-size:75%;"> You have to insert a correct email adress</span>
+</div>
+<div>
+	<span>Confirmation: </span>
+	<input [(ngModel)]="user.email2" type="text" style="width: 250px;" name="email2" placeholder="Confirm Your Email">
+	<span *ngIf="checkEmail2(user)" style="color:red; font-size:75%;"> Email and confirmation email do not match</span>
+</div>
+<div>
+	<span>Password: </span>
+	<input [(ngModel)]="user.password" type="password" name="password1: " placeholder="Enter Your Password">
+	<span *ngIf="checkPassword(user)" style="color:red; font-size:75%;"> Your password has to be at least 8 characters long</span>
+</div>
+<div>
+	<span>Confirmation: </span>
+	<input [(ngModel)]="user.password2" type="password" name="password2" placeholder="Confirm Your Password">
+</div>
+<div>
+	<span>Country: </span>
+	<select [(ngModel)]="user.country" name="country">
+		<option>France</option>
+		<option>Germany</option>
+		<option>Italy</option>
+		<option>UK</option>
+		<option>USA</option>
+		<option>Other country</option>
+	</select>
+	<span *ngIf="checkCountry(user)" style="color:red; font-size:75%;"> You have to choose a country</span>
+</div><br>
+
+<input type="submit" value="Submit !"/>
+<input type="reset" value="Reset !"/>
+
+<br>
+
+<div>
+	<span>{{user.login}}</span><br>
+	<span>{{user.email}}</span><br>
+	<span>{{user.password}}</span><br>
+	<span>{{user.country}}</span>
+</div>

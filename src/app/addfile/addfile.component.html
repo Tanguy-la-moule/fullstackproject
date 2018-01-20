@@ -1,0 +1,35 @@
+<h1>Add a File !</h1>
+<div>
+	<span>File content: </span>
+	<input [(ngModel)]="file.content" placeholder="Enter Your Content">
+	<span *ngIf="checkContent(file)" style="color:red; font-size:75%;"> Your content has to be at least 10 characters long</span>
+</div>
+<div>
+	<span>Artist: </span>
+	<input [(ngModel)]="file.artist" type="text" placeholder="Enter The Artist">
+	<span *ngIf="checkArtist(file)" style="color:red; font-size:75%;"> An artist name has to be at least 2 caracters long thanks to U2 !</span>
+</div>
+<div>
+	<span>Album: </span>
+	<input [(ngModel)]="file.album" type="text" placeholder="Enter The Album">
+	<span style="font-size: 75%"> (The album name is not compulsory)</span>
+</div>
+<div>
+	<span>Title: </span>
+	<input [(ngModel)]="file.title" placeholder="Enter the Title">
+	<span *ngIf="checkTitle(file)" style="color:red; font-size:75%;"> The title has to be at least 2 characters long</span>
+</div><br>
+
+<button routerLink="/fileadded">Upload your file without adding to playlist !</button>
+<input type="reset" value="Reset !"/>
+
+<h2>Add to your playlists <span style="font-size: 65%">(not compulsory) </span>:</h2>
+
+<ul class='playlists'>
+	<li *ngFor="let playlist of playlists">
+		<input type="checkbox" name="checkPlaylist"><span>{{playlist.name}}</span>
+	</li>
+</ul>
+
+<button routerLink="/homepage">Upload your file and add it to selected playlists !</button>
+<input type="reset" value="Reset !"/>
