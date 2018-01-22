@@ -1,6 +1,6 @@
-<nav>
+<nav style="margin-left: 10px">
   <a routerLink="/homepage">Homepage</a>
   <a *ngIf="!connected" routerLink="/connection" (click)="connected = true">Log In</a>
   <a *ngIf="!connected" routerLink="/registration">Registration</a>
-  <a *ngIf="connected" routerLink="/homepage" (click)="connected = false">Log out</a>
+  <a *ngIf="connected" routerLink="/connection" (click)="connected = false">Log out</a>
 </nav><br>

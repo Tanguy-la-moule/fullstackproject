@@ -1,0 +1,58 @@
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<h1>{{playlistname}} Playlist</h1>
+
+		<h3>Select the files to add: </h3>
+
+		<input type="checkbox" style="margin-left: 10px" checked="checked" (click)='displayall = !displayall'>
+		<span style="font-size: 80%">(show only files without playlists)</span>
+
+		<table class="table table-bordered">
+			<tr>
+				<th style="width: 30px"></th>
+		    	<th>Title</th>
+		    	<th>Artist</th>
+		    	<th>Album</th>
+			</tr>
+			
+			<tr *ngFor="let file of files">
+		    	<td *ngIf='displayall || file.playlists.length == 0'>
+		    		<input type="checkbox" (click)='checkboxadd = true'>
+		    	</td>
+		    	<td *ngIf='displayall || file.playlists.length == 0'>{{file.title}}</td>
+		    	<td *ngIf='displayall || file.playlists.length == 0'>{{file.artist}}</td>
+		    	<td *ngIf='displayall || file.playlists.length == 0'>{{file.album}}</td>
+			</tr>
+		</table>
+
+		<button *ngIf='checkboxadd' style="margin-left: 10px">Add the selected files</button>
+
+		<HR align=left width="50%">
+
+		<table class="table table-bordered">
+			<tr>
+				<th style="width: 30px"></th>
+		    	<th>Title</th>
+		    	<th>Artist</th>
+		    	<th>Album</th>
+			</tr>
+			
+			<tr *ngFor="let file of files">
+		    	<td><input type="checkbox" (click)='checkboxremove = true'></td>
+		    	<td>{{file.title}}</td>
+		    	<td>{{file.artist}}</td>
+		    	<td>{{file.album}}</td>
+			</tr>
+		</table>
+
+		<button *ngIf='checkboxremove' style="margin-left: 10px">Remove the selected files</button>
+	</body>
+</html>

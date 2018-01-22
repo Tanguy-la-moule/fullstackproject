@@ -5,7 +5,11 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { AddfileComponent } from './addfile/addfile.component';
-import { FileaddedComponent } from './fileadded/fileadded.component';
+import { PlaylistgestionComponent } from './playlistgestion/playlistgestion.component';
+import { PlaylistdetailComponent } from './playlistdetail/playlistdetail.component';
+import { AllfilesComponent } from './allfiles/allfiles.component';
+import { FriendsComponent } from './friends/friends.component';
+import { SharefileComponent } from './sharefile/sharefile.component';
 
 const routes: Routes = [
 	{ path: 'homepage', component: HomepageComponent },
@@ -13,7 +17,11 @@ const routes: Routes = [
 	{ path: 'connection', component: ConnectionComponent },
 	{ path: '', redirectTo: '/homepage', pathMatch: 'full' },
 	{ path: 'addfile', component: AddfileComponent },
-	{ path: 'fileadded', component: FileaddedComponent }
+	{ path: 'playlistgestion', component: PlaylistgestionComponent},
+	{ path: 'playlistdetail', component: PlaylistdetailComponent },
+	{ path: 'allfiles', component: AllfilesComponent },
+	{ path: 'friends', component: FriendsComponent },
+	{ path: 'sharefile', component: SharefileComponent }
 ];
 
 @NgModule({

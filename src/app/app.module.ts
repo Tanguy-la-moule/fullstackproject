@@ -9,7 +9,11 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { AddfileComponent } from './addfile/addfile.component';
-import { FileaddedComponent } from './fileadded/fileadded.component';
+import { PlaylistgestionComponent } from './playlistgestion/playlistgestion.component';
+import { PlaylistdetailComponent } from './playlistdetail/playlistdetail.component';
+import { AllfilesComponent } from './allfiles/allfiles.component';
+import { FriendsComponent } from './friends/friends.component';
+import { SharefileComponent } from './sharefile/sharefile.component';
 
 
 @NgModule({
@@ -20,7 +24,11 @@ import { FileaddedComponent } from './fileadded/fileadded.component';
     RegistrationComponent,
     ConnectionComponent,
     AddfileComponent,
-    FileaddedComponent
+    PlaylistgestionComponent,
+    PlaylistdetailComponent,
+    AllfilesComponent,
+    FriendsComponent,
+    SharefileComponent
   ],
   imports: [
     BrowserModule,

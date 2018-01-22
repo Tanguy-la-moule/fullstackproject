@@ -1,0 +1,16 @@
+<div>
+	<button>Create a new playlist</button><br>
+</div>
+
+<HR align=left width="30%">
+
+<div>
+	<ul class='playlists'>
+		<li *ngFor="let playlist of playlists" style="padding: 5px; width:455px; height: auto;">
+			<div style="text-align: center;">{{playlist.name}}</div>
+			<a routerLink='/playlistdetail'>Access a playlist</a>
+			<button>Change the name of the playlist</button>
+			<button>Delete a playlist</button>
+		</li>
+	</ul>
+</div>

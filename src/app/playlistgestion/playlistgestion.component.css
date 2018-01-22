@@ -1,0 +1,54 @@
+button {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+button:visited, button:link {
+  color: #607D8B;
+}
+button:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+button.active {
+  color: #039be5;
+}
+a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+a:visited, a:link {
+  color: #607D8B;
+}
+a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+a.active {
+  color: #039be5;
+}
+.playlists {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.playlists li {
+  position: relative;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}

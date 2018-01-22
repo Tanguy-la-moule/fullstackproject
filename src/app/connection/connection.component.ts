@@ -9,9 +9,9 @@ export class ConnectionComponent implements OnInit {
 	login = '';
 	password = '';
 
-	connection(): void {
+	connected(): void {
 		//accès base de donnée
-		alert('Welcome '+ this.login)
+		alert('Welcome '+ this.login);
 	}
 
   constructor() { }
