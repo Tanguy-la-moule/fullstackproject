@@ -14,6 +14,11 @@ import { PlaylistdetailComponent } from './playlistdetail/playlistdetail.compone
 import { AllfilesComponent } from './allfiles/allfiles.component';
 import { FriendsComponent } from './friends/friends.component';
 import { SharefileComponent } from './sharefile/sharefile.component';
+import { ShowtitlesComponent } from './showtitles/showtitles.component';
+import { ShowalbumsComponent } from './showalbums/showalbums.component';
+import { ShowartistsComponent } from './showartists/showartists.component';
+import { FriendrequestsComponent } from './friendrequests/friendrequests.component';
+import { FilesreceivedComponent } from './filesreceived/filesreceived.component';
 
 
 @NgModule({
@@ -28,7 +33,13 @@ import { SharefileComponent } from './sharefile/sharefile.component';
     PlaylistdetailComponent,
     AllfilesComponent,
     FriendsComponent,
-    SharefileComponent
+    SharefileComponent,
+    ShowtitlesComponent,
+    ShowalbumsComponent,
+    ShowartistsComponent,
+    FriendrequestsComponent,
+    FilesreceivedComponent
+    
   ],
   imports: [
     BrowserModule,

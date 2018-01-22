@@ -1,0 +1,27 @@
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<h3>Friend Requests :</h3>
+
+		<table class="table table-bordered">
+			<tr>
+		    	<th>Login</th>
+				<th style="width: 65px"></th>
+				<th style="width: 80px"></th>
+			</tr>
+			
+			<tr *ngFor="let friend of friends">
+		    	<td *ngIf="friend.login.length < 8">{{friend.login}}</td>
+			    <td *ngIf="friend.login.length < 8"><button>Add</button></td>
+			    <td *ngIf="friend.login.length < 8"><button style="color: red; background-color: pink">Ignore</button></td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -10,6 +10,9 @@ import { PlaylistdetailComponent } from './playlistdetail/playlistdetail.compone
 import { AllfilesComponent } from './allfiles/allfiles.component';
 import { FriendsComponent } from './friends/friends.component';
 import { SharefileComponent } from './sharefile/sharefile.component';
+import { FilesreceivedComponent } from './filesreceived/filesreceived.component';
+import { FriendrequestsComponent } from './friendrequests/friendrequests.component';
+
 
 const routes: Routes = [
 	{ path: 'homepage', component: HomepageComponent },
@@ -21,7 +24,9 @@ const routes: Routes = [
 	{ path: 'playlistdetail', component: PlaylistdetailComponent },
 	{ path: 'allfiles', component: AllfilesComponent },
 	{ path: 'friends', component: FriendsComponent },
-	{ path: 'sharefile', component: SharefileComponent }
+	{ path: 'sharefile', component: SharefileComponent },
+	{ path: 'filesreceived', component: FilesreceivedComponent},
+	{ path: 'friendrequests', component: FriendrequestsComponent}
 ];
 
 @NgModule({

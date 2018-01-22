@@ -1,0 +1,19 @@
+<table class="table table-bordered">
+	<tr>
+    	<th style="vertical-align: middle;">Title</th>
+    	<th style="vertical-align: middle;">Artist</th>
+    	<th style="vertical-align: middle;">Album</th>
+    	<th style="font-size: 75%; width: 160px; text-align: center;">(you can select several<br>songs to send to a friend)</th>
+    	<th style="width: 30px">Deletion</th>
+	</tr>
+	
+	<tr *ngFor="let file of files">
+    	<td style="vertical-align: middle;">{{file.title}}</td>
+    	<td style="vertical-align: middle;">{{file.artist}}</td>
+    	<td style="vertical-align: middle;">{{file.album}}</td>
+    	<td><input type="checkbox" style="vertical-align: middle;">
+    		<button style="color: #0f5c91; background-color: #61ade2" routerLink='/sharefile'>Send to a friend</button>
+    	</td>
+    	<td><button style="color: red; background-color: pink">Delete</button></td>
+	</tr>
+</table>

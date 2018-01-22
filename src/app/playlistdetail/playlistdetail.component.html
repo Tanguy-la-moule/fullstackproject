@@ -18,9 +18,9 @@
 		<table class="table table-bordered">
 			<tr>
 				<th style="width: 30px"></th>
-		    	<th>Title</th>
-		    	<th>Artist</th>
-		    	<th>Album</th>
+				<th>Title</th>
+				<th>Artist</th>
+				<th>Album</th>
 			</tr>
 			
 			<tr *ngFor="let file of files">
@@ -39,20 +39,26 @@
 
 		<table class="table table-bordered">
 			<tr>
-				<th style="width: 30px"></th>
+				<th style="color: red; background-color: pink; width: 70px">Remove</th>
 		    	<th>Title</th>
 		    	<th>Artist</th>
 		    	<th>Album</th>
+		    	<th style="width: 145px; text-align: center;">Send a file</th>
 			</tr>
 			
 			<tr *ngFor="let file of files">
-		    	<td><input type="checkbox" (click)='checkboxremove = true'></td>
+		    	<td><input type="checkbox" style="margin-left: 24px" (click)='checkboxremove = true'></td>
 		    	<td>{{file.title}}</td>
 		    	<td>{{file.artist}}</td>
 		    	<td>{{file.album}}</td>
+		    	<td>
+    				<button style="color: #0f5c91; background-color: #61ade2" routerLink='/sharefile'>Send to a friend</button>
+    			</td>
 			</tr>
 		</table>
 
 		<button *ngIf='checkboxremove' style="margin-left: 10px">Remove the selected files</button>
+
+		<button style="color: #0f5c91; background-color: #61ade2; font-size: 150%; margin-left: 60px" routerLink='/sharefile'>Send the whole playlist to a friend</button>
 	</body>
 </html>

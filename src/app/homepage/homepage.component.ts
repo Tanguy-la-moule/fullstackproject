@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
+	filenumber = 2;
+	friendnumber = 4;
 
   constructor() { }
 

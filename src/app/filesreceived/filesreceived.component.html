@@ -1,0 +1,33 @@
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<h3>Files received :</h3>
+
+		<table class="table table-bordered">
+			<tr>
+		    	<th>Title</th>
+		    	<th>Artist</th>
+		    	<th>Album</th>
+				<th style="width: 70px"></th>
+				<th style="width: 155px"></th>
+				<th style="width: 80px"></th>
+			</tr>
+			
+			<tr *ngFor="let file of files">
+		    	<td *ngIf="file.title.length < 7">{{file.title}}</td>
+			    <td *ngIf="file.title.length < 7">{{file.artist}}</td>
+			    <td *ngIf="file.title.length < 7">{{file.album}}</td>
+			    <td *ngIf="file.title.length < 7"><button>Listen</button></td>
+			    <td *ngIf="file.title.length < 7"><button>Add it to your files</button></td>
+			    <td *ngIf="file.title.length < 7"><button style="color: red; background-color: pink">Remove</button></td>
+			</tr>
+		</table>
+	</body>
+</html>

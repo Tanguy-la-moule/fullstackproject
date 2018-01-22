@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FILES } from '../mock-files';
+import { ShowalbumsComponent } from '../showalbums/showalbums.component';
+import { ShowartistsComponent } from '../showartists/showartists.component';
+import { ShowtitlesComponent } from '../showtitles/showtitles.component'
+
 
 @Component({
   selector: 'app-allfiles',
@@ -8,8 +11,24 @@ import { FILES } from '../mock-files';
   styleUrls: ['./allfiles.component.css']
 })
 export class AllfilesComponent implements OnInit {
-	
-	files = FILES;
+
+	whatToDisplay = [true, false, false];
+
+	DisplayTitle(): boolean[] {
+		return [true, false, false];
+	}
+	DisplayArtist(): boolean[] {
+		return [false, true, false];
+	}
+	DisplayAlbum(): boolean[] {
+		return [false, false, true];
+	}
+	Analyse(whatToDisplay): string {
+		if (whatToDisplay[0]){ return 'Titles'}
+		else if (whatToDisplay[1]){ return 'Artists'}
+		else if (whatToDisplay[2]){ return 'Albums'}
+		else {return 'error'} 
+	}
 
   constructor() { }
 

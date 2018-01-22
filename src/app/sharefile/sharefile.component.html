@@ -1,0 +1,49 @@
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<h3>You chose to send :</h3>
+
+		<table class="table table-bordered">
+			<tr>
+		    	<th>Title</th>
+		    	<th>Artist</th>
+		    	<th>Album</th>
+				<th></th>
+			</tr>
+			
+			<tr *ngFor="let file of files">
+		    	<td *ngIf="file.title.length > 8">{{file.title}}</td>
+			    <td *ngIf="file.title.length > 8">{{file.artist}}</td>
+			    <td *ngIf="file.title.length > 8">{{file.album}}</td>
+			    <td *ngIf="file.title.length > 8" style="width: 165px"><button style="color: red; background-color: pink">Do not send this file</button></td>
+			</tr>
+		</table>
+
+		<h3>Choose the friends receiving the file:</h3>
+
+		<input type="checkbox" style="margin-left: 60px"><span style="font-size: 150%"> Had to your story for 24 hours !</span><br>
+
+		<table class="table table-bordered">
+			<tr>
+				<th>Friend's login</th>
+		    	<th style="width: 145px; text-align: center;">Send your friends</th>
+			</tr>
+			
+			<tr *ngFor="let friend of friends">
+				<td>{{friend.login}}</td>
+		    	<td><input type="checkbox" style="margin-left: 60px"></td>
+		    	
+			</tr>
+		</table>
+
+		<button style="color: #0f5c91; background-color: #61ade2; font-size: 150%; margin-left: 60px" routerLink='/homepage'>Send</button>
+	</body>
+</html>
+

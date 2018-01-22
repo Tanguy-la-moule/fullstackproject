@@ -1,0 +1,24 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		
+		<h1>All files sorted by {{Analyse(whatToDisplay)}}</h1>
+
+		<div>
+			<span>Show by : </span>
+			<button (click)='whatToDisplay = DisplayTitle()'>Title</button>
+			<button (click)='whatToDisplay = DisplayArtist()'>Artist</button>
+			<button (click)='whatToDisplay = DisplayAlbum()'>Album</button>
+		</div><br>
+
+		<app-showtitles *ngIf='whatToDisplay[0]'></app-showtitles>
+		<app-showartists *ngIf='whatToDisplay[1]'></app-showartists>
+		<app-showalbums *ngIf='whatToDisplay[2]'></app-showalbums>
+	</body>

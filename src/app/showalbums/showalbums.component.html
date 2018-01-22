@@ -1,0 +1,12 @@
+<ul class='albums'>
+  <li *ngFor="let file of files">
+    <span class='badge' style="font-size: 150%;">{{file.album}}</span><span>({{file.artist}})</span>
+    <table class="table table-bordered">
+      <tr>
+          <td style="vertical-align: middle;">{{file.title}}</td>
+          <td style="width: 140px"><button style="color: #0f5c91; background-color: #61ade2" routerLink='/sharefile'>Send to a friend</button></td>
+          <td style="width: 60px"><button style="color: red; background-color: pink">Delete</button></td>
+      </tr>
+    </table>
+  </li>
+</ul>
